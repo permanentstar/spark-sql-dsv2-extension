@@ -24,8 +24,18 @@ Combine File committer and HMS committer as a whole.
 
 ![spark-ds-v2-arch-open_source](https://user-images.githubusercontent.com/10155248/167095990-0cae22b6-8736-4f64-a1f7-0321680b317c.png)
 ### HOW TO USE
+The compiled releasing jar can be found at [Central repository](https://repo1.maven.org/maven2/com/daasyyds/spark/spark-dsv2-hive-catalog/).  
+You can also import it into your pom dependency if used by programming.  
+```
+<!-- https://mvnrepository.com/artifact/com.daasyyds.spark/spark-dsv2-hive-catalog -->
+<dependency>
+  <groupId>com.daasyyds.spark</groupId>
+  <artifactId>spark-dsv2-hive-catalog</artifactId>
+  <version>3.1.2-v1</version>
+</dependency>
+```
 A serials additional properties should be appended into spark-defaults.conf or --conf args in spark-submit.  
-For framework lib support, add com.yyds.daas:hive-catalog:3.1.2 to spark.jars or --jars.  
+For framework lib support, add com.daasyyds.spark:spark-dsv2-hive-catalog:3.1.2-v1 to spark.jars or --jars.  
 For each custom hive catalog,  
 i) A mandatory hive-site location should always explicitly point out by `spark.sql.catalog.{catalog_name}.hive.conf`,
 currently `classpath` and `path` manners(the latter is default) are supported.  
@@ -39,7 +49,7 @@ spark.sql.hive.metastore.jars           path
 spark.sql.hive.metastore.jars.path      file:///opt/hive2/lib/*.jar
 spark.sql.catalogImplementation         hive
 
-spark.jars                              file:///opt/spark/ext-lib/hive-catalog-3.1.2.jar
+spark.jars                              file:///opt/spark/ext-lib/spark-dsv2-hive-catalog-3.1.2-v1.jar
 
 # for catalog hive1_external
 spark.sql.catalog.hive1_external                                        com.daasyyds.spark.sql.dsv2.hive.V2ExternalCatalog
