@@ -23,7 +23,7 @@
     <groupId>com.daasyyds.spark</groupId>
     <artifactId>spark-sql-dsv2-extension</artifactId>
     <packaging>pom</packaging>
-    <version>3.1.2-SNAPSHOT</version>
+    <version>3.1.2-v1</version>
     <description>Some datasource v2 extension customized on spark sql</description>
     <url>https://github.com/permanentstar/spark-sql-dsv2-extension</url>
     <name>spark-sql-dsv2-extension</name>
